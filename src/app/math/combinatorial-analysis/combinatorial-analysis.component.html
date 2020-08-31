@@ -1,0 +1,37 @@
+<h1 class="title">
+  Análise Combinatória
+</h1>
+
+<div class="tabs">
+  <mat-tab-group>
+    <mat-tab label="Fatorial">
+      <div class="tabs-content">
+        <app-factorial></app-factorial>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Permutações">
+      <ng-template matTabContent>
+        <div class="tabs-content">
+          <app-arrangement operation="permutation"></app-arrangement>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Arranjos">
+      <ng-template matTabContent>
+        <div class="tabs-content">
+          <app-arrangement operation="arrangement"></app-arrangement>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Combinações">
+      <ng-template matTabContent>
+        <div class="tabs-content">
+          <app-arrangement operation="combination"></app-arrangement>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

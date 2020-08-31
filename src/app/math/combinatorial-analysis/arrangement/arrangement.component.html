@@ -1,0 +1,21 @@
+<h2 class="title">
+  {{ title }}
+</h2>
+
+<app-element-input
+  [isPermutation]="operation === 'permutation'"
+  (submitted)="calculate()"></app-element-input>
+
+<div class="result" *ngIf="showResult">
+  <div class="equation">
+    <span>
+      {{ equation }}
+    </span>
+  </div>
+
+  <div class="elements">
+    <div class="element" *ngFor="let r of results">
+      {{ r }}
+    </div>
+  </div>
+</div>

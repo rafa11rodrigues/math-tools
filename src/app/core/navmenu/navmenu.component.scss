@@ -1,0 +1,35 @@
+@import '_palettes';
+
+%highlight {
+  background-color: $accent-darker;
+  font-weight: bold;
+  color: black !important;
+}
+
+%menu-item {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  color: white !important;
+  text-decoration: none;
+  transition: 1000ms background-color, 1000ms color;
+
+  &:hover, &:focus {
+    @extend %highlight;
+  }
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+
+  .menu__item {
+    @extend %menu-item;
+  }
+
+  .menu__item.active {
+    @extend %highlight;
+    background-color: darken($color: $accent-darker, $amount: 20);
+  }
+}

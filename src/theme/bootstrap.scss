@@ -1,0 +1,58 @@
+// this file imports some bootstrap features and overrides some undesired styles
+// Font: https://www.amadousall.com/the-good-parts-of-bootstrap-4-you-are-missing-in-your-angular-material-projects/
+
+@import "./palettes";
+@import "./constants";
+
+/* ============================================= */
+// variables used by bootstrap
+/* ============================================= */
+
+$link-color: $primary-default;
+$link-hover-color: $primary-lighter;
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+// grid system settings to fit to material design
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl
+);
+
+$container-max-widths: (
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1600px
+);
+
+/* ============================================= */
+// bootstrap imports
+/* ============================================= */
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+
+
+/* ============================================= */
+// fixing undesired bootstrap themes
+/* ============================================= */
+
+* {
+  &:active,
+  :focus {
+    outline: none !important;
+  }
+}
+
+a:not(.mat-button):not(.mat-raised-button):not(.mat-fab):not(.mat-mini-fab):not([mat-list-item]) {
+  color: $primary-default;
+}

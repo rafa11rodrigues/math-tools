@@ -1,0 +1,132 @@
+/* ============================================== */
+// palettes to be used in theming mixins
+/* ============================================== */
+
+$primary-palette: (
+    50 : #e8e5ff,
+    100 : #c5beff,
+    200 : #9e93ff,
+    300 : #7767ff,
+    400 : #5947ff,
+    500 : #3c26ff,
+    600 : #3622ff,
+    700 : #2e1cff,
+    800 : #2717ff,
+    900 : #1a0dff,
+    A100 : #ffffff,
+    A200 : #f7f6ff,
+    A400 : #c6c3ff,
+    A700 : #adaaff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$accent-palette: (
+    50 : #eaf2ff,
+    100 : #cbdfff,
+    200 : #a8caff,
+    300 : #85b5ff,
+    400 : #6aa5ff,
+    500 : #5095ff,
+    600 : #498dff,
+    700 : #4082ff,
+    800 : #3778ff,
+    900 : #2767ff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #d4e0ff,
+    A700 : #bbcdff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$warn-palette: (
+    50 : #fee8e7,
+    100 : #fcc7c3,
+    200 : #faa19b,
+    300 : #f77b72,
+    400 : #f65f54,
+    500 : #f44336,
+    600 : #f33d30,
+    700 : #f13429,
+    800 : #ef2c22,
+    900 : #ec1e16,
+    A100 : #ffffff,
+    A200 : #ffe9e9,
+    A400 : #ffb8b6,
+    A700 : #ff9f9c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$primary-default-hue: 500;
+$primary-lighter-hue: 200;
+$primary-darker-hue: 800;
+
+$accent-default-hue: 200;
+$accent-lighter-hue: 50;
+$accent-darker-hue: 400;
+
+$warn-default-hue: 500;
+$warn-lighter-hue: 200;
+$warn-darker-hue: 800;
+
+/* ============================================== */
+// variables to use in custom components
+/* ============================================== */
+
+$primary-default: map-get($primary-palette, $primary-default-hue);
+$primary-lighter: map-get($primary-palette, $primary-lighter-hue);
+$primary-darker: map-get($primary-palette, $primary-darker-hue);
+
+$accent-default: map-get($accent-palette, $accent-default-hue);
+$accent-lighter: map-get($accent-palette, $accent-lighter-hue);
+$accent-darker: map-get($accent-palette, $accent-darker-hue);
+
+$warn-default: map-get($warn-palette, $warn-default-hue);
+$warn-lighter: map-get($warn-palette, $warn-lighter-hue);
+$warn-darker: map-get($warn-palette, $warn-darker-hue);
+

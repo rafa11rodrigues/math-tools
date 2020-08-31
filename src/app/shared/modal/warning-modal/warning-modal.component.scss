@@ -1,0 +1,16 @@
+.content {
+  width: 100%;
+  max-width: 450px;
+
+  .message {
+    padding: 0;
+    margin: 0;
+  }
+
+  .button {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+  }
+}

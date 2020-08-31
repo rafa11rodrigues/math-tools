@@ -1,0 +1,18 @@
+@import '_constants';
+@import '_palettes';
+
+.content {
+  padding-top: calc(#{$header-height} + #{$main-content-padding});
+  padding-left: $main-content-padding-h;
+  padding-right: $main-content-padding-h;
+}
+
+.menu__wrapper {
+  top: $header-height;
+  bottom: 0;
+  background-color: $primary-default;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}

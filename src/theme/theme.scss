@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import './palettes';
+
+
+$theme-primary: mat-palette($primary-palette, $primary-default-hue, $primary-lighter-hue, $primary-darker-hue);
+$theme-accent: mat-palette($accent-palette, $accent-default-hue, $accent-lighter-hue, $accent-darker-hue);
+$theme-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+
+@include angular-material-theme($custom-theme);

@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import './theme/bootstrap.scss';
+@import '_constants';
+
+.title {
+  margin-bottom: $title-margin;
+}
+
+.form-group {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.form-control {
+  margin: 5px 0;
+  width: 100%;
+
+  textarea {resize: none;}
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin: 0 5px;
+  }
+}
+
+.mat-menu-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 1px solid $accent-darker;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.tooltip {
+  background-color: $primary-darker;
+  color: white !important;
+  font-weight: bold;
+}

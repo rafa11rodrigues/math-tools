@@ -1,0 +1,22 @@
+<h2 class="title">
+  Fatorial
+</h2>
+
+<form class="form-group" autocomplete="off"
+    [formGroup]="form" (ngSubmit)="calculate()">
+
+  <mat-form-field class="field">
+    <mat-label>Fatorial de</mat-label>
+    <input matInput type="number" min="0" required formControlName="n"
+        (focus)="$event.target.select()" />
+    <mat-error>Insira um número inteiro maior ou igual a 0</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">
+    Calcular
+  </button>
+</form>
+
+<div class="result" *ngIf="showResult">
+  {{ expression }}
+</div>

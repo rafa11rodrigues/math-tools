@@ -1,0 +1,29 @@
+@import '_constants';
+@import '_palettes';
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  position: fixed;
+  top: 0;
+  height: $header-height;
+  background-color: $primary-default;
+  color: white;
+
+  .appname, .menu-button__wrapper, .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button {
+    border-radius: 40px;
+    background-color: $primary-darker;
+    color: white;
+
+    &:hover { background-color: $primary-lighter; color: black }
+  }
+}

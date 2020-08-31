@@ -28,9 +28,18 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap-grid.css",
+              "src/theme/theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/theme"
+              ]
+            },
+            "scripts": [
+              "node_modules/mathjax/es5/tex-chtml.js"
+            ]
           },
           "configurations": {
             "production": {

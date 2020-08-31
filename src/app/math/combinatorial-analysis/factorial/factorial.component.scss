@@ -1,0 +1,12 @@
+@import '_palettes';
+
+.field {
+  margin-right: 15px;
+}
+
+.result {
+  border: 1px solid $primary-lighter;
+  margin-top: 20px;
+  padding: 15px;
+  overflow: scroll;
+}

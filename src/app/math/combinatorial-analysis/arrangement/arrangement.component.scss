@@ -1,0 +1,23 @@
+@import '_palettes';
+
+.result {
+  margin-top: 50px;
+
+  .equation, .elements {
+    overflow: scroll;
+    border: 1px solid $primary-lighter;
+  }
+
+  .elements {
+    height: auto;
+    max-height: 500px;
+    margin: 20px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .element {
+      margin: 20px;
+    }
+  }
+}

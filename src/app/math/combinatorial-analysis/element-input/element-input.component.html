@@ -1,0 +1,58 @@
+<form class="form-group" autocomplete="off"
+    [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="elements container-fluid">
+    <div class="input-type">
+      <p>Tipo de entrada</p>
+
+      <mat-radio-group formControlName="type" aria-label="Tipo de entrada" color="primary"
+          (change)="changeType($event)">
+        <mat-radio-button class="option" value="word">Palavra</mat-radio-button>
+        <mat-radio-button class="option" value="elements">Elementos separados</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field *ngIf="type === 'word'" class="form-control">
+      <mat-label>Palavra</mat-label>
+      <input matInput formControlName="word" />
+    </mat-form-field>
+
+    <div class="row" *ngIf="type === 'elements'"
+          formArrayName="elements">
+      <div class="col-6 col-sm-3 col-md-2 col-lg-1"
+          *ngFor="let e of elements.controls; let i = index">
+        <mat-form-field class="form-control">
+          <mat-label>Elemento</mat-label>
+          <input matInput [formControl]="e" />
+          <button mat-icon-button matSuffix color="warn"
+              type="button"
+              aria-label="Remover"
+              *ngIf="elements.length > 1"
+              (click)="removeElement(i)">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="col-auto add-element__wrapper">
+        <button type="button" mat-raised-button color="accent"
+            (click)="addElement()">
+          Adicionar elemento
+        </button>
+      </div>
+    </div>
+
+    <div class="calculate__wrapper">
+      <mat-form-field class="taken" *ngIf="!isPermutation">
+        <mat-label>Tomados</mat-label>
+        <input type="number" matInput formControlName="taken" required min="0" [attr.max]="totalElements"
+          (focus)="updateTakenValidators(); $event.target.select()" />
+        <mat-error>Valor deve estar entre 0 e n</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">
+        Calcular
+      </button>
+    </div>
+  </div>
+</form>
